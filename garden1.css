@@ -5,6 +5,23 @@
     background: linear-gradient(180deg, #476e42, #997b43 50%);
 }
 
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 5%; 
+}
+
+#home {
+  padding: 10px;
+  background-color: blue;
+}
+
+#store {
+  padding: 10px;
+  background-color: red; 
+}
+
 #water {
     height: 20px; 
     background-color: pink; 
