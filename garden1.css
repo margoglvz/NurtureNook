@@ -11,3 +11,8 @@
 html {
     background-color: #476e42; 
 }
+
+#water {
+    height: 20px; 
+    background-color: pink; 
+}
