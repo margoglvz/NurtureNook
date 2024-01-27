@@ -12,19 +12,31 @@ ul {
   gap: 5%; 
 }
 
+#nav_bar {
+  border-radius: 25px; 
+  background-color: #544325; 
+}
+
 #home {
+  border-radius: 25px; 
   padding: 10px;
-  background-color: blue;
+  background-color: white;
+}
+#home:hover {
+  border-radius: 25px; 
+  padding: 15px;
+  background-color: white;
 }
 
 #store {
+  border-radius: 25px; 
   padding: 10px;
-  background-color: red; 
+  background-color: white; 
 }
-
-#water {
-    height: 20px; 
-    background-color: pink; 
+#store:hover {
+  border-radius: 25px; 
+  padding: 15px;
+  background-color: white; 
 }
 
 #parent {

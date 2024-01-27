@@ -7,7 +7,7 @@ function water() {
     if (water_counter > 24) {
         document.getElementById("coins").innerHTML = ""; 
         document.getElementById("coins").innerHTML += `
-        <h1>Coins: ${water_counter - 24}</h1>
+        <h1 id="coins">Coins: ${water_counter - 24}</h1>
         `
     }
     
@@ -25,6 +25,15 @@ function display() {
 
 }
 
-function hi() {
-    console.log("NO")
+function home() {
+    window.location = "html_front.html"; 
 }
+
+function store() {
+    window.location = "store.html"; 
+}
+
+function garden1() {
+    window.location = "garden1.html";
+}
+
