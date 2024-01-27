@@ -1,0 +1,8 @@
+html{
+    background-color: #597E52;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
