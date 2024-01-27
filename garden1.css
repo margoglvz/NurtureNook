@@ -5,18 +5,38 @@
     background: linear-gradient(180deg, #476e42, #997b43 50%);
 }
 
+#water {
+    height: 20px; 
+    background-color: pink; 
+}
+
 #parent {
     position: relative;
-    top: 0;
-    left: 0;
   }
   #plank {
-    position: relative;
-    top: 50px;
-    left: 0;
+    position: absolute;
+    top: 30%; 
+    width: 100%; 
+  }
+  #pot_back {
+    position: absolute;
+    top: 30%; 
+    left: 10%; 
+    width: 30%;
+  }
+  #lavender_seed {
+    position: absolute;
+    top: 30%; 
+    left: 10%; 
+    width: 30%;
   }
   #pot_front {
     position: absolute;
-    top: 0px;
-    left: 60px;
+    left: 10%; 
+    top: 30%; 
+    width: 30%;
   }
+  html {
+    background-color: #476e42;
+  }
+  
