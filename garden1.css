@@ -1,0 +1,6 @@
+#plank {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    background: linear-gradient(180deg, #476e42, #997b43 50%);
+}
