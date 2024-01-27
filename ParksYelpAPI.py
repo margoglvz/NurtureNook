@@ -1,7 +1,7 @@
 import requests
 
 def getParks_byCity(term: str):
-    url = "https://api.yelp.com/v3/businesses/search?sort_by=best_match&limit=20&location={term}&term=gardens near me"
+    url = f"https://api.yelp.com/v3/businesses/search?sort_by=best_match&limit=20&location={term}&term=gardens near me"
 
     payload = {}
     headers = {
