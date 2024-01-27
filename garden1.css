@@ -1,15 +1,8 @@
 #plank {
-    position: absolute; 
-    top: 20%; 
     display: block;
     margin-left: auto;
     margin-right: auto; 
     background: linear-gradient(180deg, #476e42, #997b43 50%);
-    width: 100%; 
-}
-
-html {
-    background-color: #476e42; 
 }
 
 #water {
