@@ -1,9 +1,9 @@
-#plank {
+/* #plank {
     display: block;
     margin-left: auto;
     margin-right: auto; 
     background: linear-gradient(180deg, #476e42, #997b43 50%);
-}
+} */
 
 #parent {
     position: relative;
@@ -12,11 +12,21 @@
   }
   #plank {
     position: relative;
-    top: 50px;
+    top: 300px;
     left: 0;
+  }
+  #pot_back {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+  }
+  #lavender_seed {
+    position: absolute;
+    top: 150px;
+    left: 100px;
   }
   #pot_front {
     position: absolute;
-    top: 0px;
-    left: 60px;
+    top: 150px;
+    left: 100px;
   }
