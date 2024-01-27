@@ -14,24 +14,29 @@
     position: relative;
   }
   #plank {
-    position: relative;
-    top: 200px;
-    left: 0;
+    position: absolute;
+    top: 30%; 
+    width: 100%; 
   }
   #pot_back {
     position: absolute;
-    top: 150px;
-    left: 100px;
+    top: 30%; 
+    left: 10%; 
+    width: 30%;
   }
   #lavender_seed {
     position: absolute;
-    top: 150px;
-    left: 100px;
+    top: 30%; 
+    left: 10%; 
+    width: 30%;
   }
   #pot_front {
     position: absolute;
-    top: 0px;
-    left: 60px;
-    top: 150px;
-    left: 100px;
+    left: 10%; 
+    top: 30%; 
+    width: 30%;
   }
+  html {
+    background-color: #476e42;
+  }
+  
