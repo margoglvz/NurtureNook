@@ -1,6 +1,6 @@
 html{
     font-family: Garamond, serif;
-    background: radial-gradient(circle at 31.2%, #597E52, #597E52 36%, #99BC85 40%, #597E52 20%);
+    background: radial-gradient(circle at 31.5%, #597E52, #597E52 36%, #99BC85 65%, #597E52 20%);
 }
 
 
@@ -28,13 +28,15 @@ button{
     margin-left: -10px;
     margin-top: 20px;
     
-    border-width: 2px;
-    border-radius: 10px;
+    border-width: 3px;
+    border-color: #597E52;
+
 
     font-size: 40px;
     font-family: Garamond, serif;
 
-    text-shadow: 2px 2px 3px #597E52;
+    box-shadow: 3px 3px 5px #233720;
+    
 }
 
 button:hover{
@@ -42,8 +44,7 @@ button:hover{
     align-items: center;
     background-color: #f2faee;
 
-    border-width: 2px;
-    border-radius: 10px;
+    border-width: 3px;
 
     font-size: 40px;
     font-family: Garamond, serif;
