@@ -1,29 +1,32 @@
 html{
     background-color: #99BC85;
     font-family: Garamond, serif;
+    background: radial-gradient(circle at 31.3%, #597E52, #597E52 36%, #cfe2c0 40%, #597E52 20%);
 }
 
 
 h1{
     display: flex;
     font-size: 150px;
-    color: #597E52;
+    color: #D4E7C5;
     text-shadow: 2px 2px 3px #101b0e;
     justify-content: center;
     align-items: center;
     padding-right: 40px;
+    margin-top: -2px;
 
 }
 
 .first{
-    margin-bottom: -100px;
-   
+    margin-bottom: -10px;
 }
 
 button{
     display: flex;
     justify-content: center;
     background-color: #E1F0DA;
+
+    margin-left: -10px;
     
     border-width: 2px;
     border-radius: 10px;
@@ -36,7 +39,10 @@ button:hover{
     display: flex;
     align-items: center;
     background-color: #f2faee;
-    border-radius: 4px;
+
+    border-width: 2px;
+    border-radius: 10px;
+
     font-size: 40px;
     font-family: Garamond, serif;
 }
@@ -55,11 +61,12 @@ button:hover{
 
 .column2{
     padding-top: 170px;
-    margin-top: 40px;
+    margin-top: 100px;
 }
 
 .img{
     display: flex;
-    align-content: bottom;
+    justify-content: center;
+
 }
 
