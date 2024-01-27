@@ -32,3 +32,33 @@ ul {
     font-size: 30px; 
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
   }
+
+  #seeds {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: pink; 
+    gap: 10%; 
+  }
+  
+  #prices {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: purple; 
+    gap: 40%; 
+    
+  }
+
+  #labels {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green; 
+    gap: 40%; 
+    
+  }
+
+  #space {
+    height: 20px; 
+  }
