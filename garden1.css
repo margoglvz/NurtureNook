@@ -4,3 +4,19 @@
     margin-right: auto; 
     background: linear-gradient(180deg, #476e42, #997b43 50%);
 }
+
+#parent {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  #plank {
+    position: relative;
+    top: 50px;
+    left: 0;
+  }
+  #pot_front {
+    position: absolute;
+    top: 0px;
+    left: 60px;
+  }
