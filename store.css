@@ -1,0 +1,11 @@
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 5%; 
+  }
+  
+  #nav_bar {
+    border-radius: 25px; 
+    background-color: #597E52; 
+  }
