@@ -7,3 +7,18 @@ document.getElementById("coins").innerHTML = `<h1 id="coins">Coins: ${num_coins}
 function garden1() {
     window.location = "garden1.html";
 }
+
+function purchase(packet) {
+    if (packet == 'chamomile') {
+        document.getElementById("chamomile_image").style.filter = "brightness(120%)"; 
+        setTimeout(1000); 
+        document.getElementById("chamomile_image").style.filter = "brightness(50%)"; 
+    }
+    if (packet == 'cattail') {
+        document.getElementById("cattail_image").style.filter = "brightness(120%)"; 
+        setTimeout(1000); 
+        document.getElementById("cattail_image").style.filter = "brightness(50%)"; 
+    }
+
+}
+
