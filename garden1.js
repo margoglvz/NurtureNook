@@ -1,4 +1,5 @@
 let water_counter = 0;
+let waterlily_water_counter = 0;
 let coin_counter = 0;
 
 function water() {
@@ -21,6 +22,28 @@ function water() {
         }
     }
 }
+
+function water_waterlily() {
+    waterlily_water_counter++; 
+    if (waterlily_water_counter > 24) {
+        coin_counter++; 
+    }
+   
+    console.log(waterlily_water_counter);
+    if (waterlily_water_counter > 24) {
+        document.getElementById("coins").textContent = `Coins: ${coin_counter}`; 
+    }
+    
+    var img_number = Math.floor(waterlily_water_counter/8)+1;
+    if (img_number < 5) {
+        if (waterlily_water_counter % 8 == 0) {
+            var waterlily = document.getElementById("waterlily_seed");
+            console.log(`images/waterlily_${img_number}.png`);
+            waterlily.src=`images/waterlily_${img_number}.png`;
+        }
+    }
+}
+
 
 function home() {
     window.location = "html_front.html"; 
