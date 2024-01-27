@@ -1,7 +1,20 @@
 html{
     background-color: #99BC85;
+    font-family: Garamond, serif;
 }
 
+
 h1{
-    font: #597E52;
+    display: flex;
+    font-size: 100px;
+    color: #597E52;
+    text-shadow: 2px 2px 3px #101b0e;
 }
+
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+  }
