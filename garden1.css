@@ -9,3 +9,29 @@
     height: 20px; 
     background-color: pink; 
 }
+
+#parent {
+    position: relative;
+  }
+  #plank {
+    position: relative;
+    top: 200px;
+    left: 0;
+  }
+  #pot_back {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+  }
+  #lavender_seed {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+  }
+  #pot_front {
+    position: absolute;
+    top: 0px;
+    left: 60px;
+    top: 150px;
+    left: 100px;
+  }
