@@ -14,29 +14,46 @@ ul {
 
 #nav_bar {
   border-radius: 25px; 
-  background-color: #544325; 
+  background-color: #597E52; 
 }
 
 #home {
-  border-radius: 25px; 
   padding: 10px;
-  background-color: white;
+  background-color: #E1F0DA;
+  border-width: 2px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: Garamond, serif;
+  text-shadow: 2px 2px 3px #597E52;
 }
 #home:hover {
-  border-radius: 25px; 
+  border-width: 2px;
+  border-radius: 10px;
   padding: 15px;
   background-color: white;
 }
 
 #store {
-  border-radius: 25px; 
   padding: 10px;
-  background-color: white; 
+  background-color: #E1F0DA;
+  border-width: 2px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: Garamond, serif;
+  text-shadow: 2px 2px 3px #597E52;
 }
 #store:hover {
-  border-radius: 25px; 
+  border-width: 2px;
+  border-radius: 10px;
   padding: 15px;
   background-color: white; 
+}
+#coins {
+  position: absolute;
+  left: 90%; 
+  font-size: 20px;
+  font-family: Garamond, serif;
+  text-shadow: 2px 2px 3px #597E52;
 }
 
 #parent {

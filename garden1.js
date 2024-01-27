@@ -5,10 +5,7 @@ function water() {
     water_counter++; 
     console.log(water_counter);
     if (water_counter > 24) {
-        document.getElementById("coins").innerHTML = ""; 
-        document.getElementById("coins").innerHTML += `
-        <h1 id="coins">Coins: ${water_counter - 24}</h1>
-        `
+        document.getElementById("coins").textContent = `Coins: ${water_counter - 24}`; 
     }
     
     var img_number = Math.floor(water_counter/8)+1;
