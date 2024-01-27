@@ -1,9 +1,7 @@
 import requests
 
 def getParks_byCity(term: str):
-    #url = "https://api.yelp.com/v3/businesses/search?sort_by=best_match&limit=20&location=irvine&term=gardens near me"
-
-    url = f"https://api.yelp.com/v3/businesses/search?sort_by=best_match&limit=30&location={term}&term=gardensnearme"
+    url = "https://api.yelp.com/v3/businesses/search?sort_by=best_match&limit=20&location={term}&term=gardens near me"
 
     payload = {}
     headers = {
@@ -11,8 +9,8 @@ def getParks_byCity(term: str):
     'Authorization': 'Bearer 1muoimTp10TZ2yTNQlKmMmhWcf77PDxciOm1K3KkbCpjlP1otTxuYIhh2D7FIGYFnFP4ScYRcO9BwvKg1kbY7DfGR5Wi4-_7t8h2YJ1CrCP5IK6MNmL-5y5m1mS1ZXYx'
     }
 
-    response = requests.request("GET", url, headers=headers, data=payload, location=term)
-
+    response = requests.request("GET", url, headers=headers, data=payload)
+    print(response)
     return response.json()
 
 try:
