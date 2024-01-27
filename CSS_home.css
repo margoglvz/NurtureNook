@@ -8,7 +8,7 @@ h1{
     display: flex;
     font-size: 150px;
     color: #D4E7C5;
-    text-shadow: 2px 2px 3px #101b0e;
+    text-shadow: 2px 2px 4px #101b0e;
     justify-content: center;
     align-items: center;
     padding-right: 40px;
@@ -26,12 +26,15 @@ button{
     background-color: #E1F0DA;
 
     margin-left: -10px;
+    margin-top: 20px;
     
     border-width: 2px;
     border-radius: 10px;
 
     font-size: 40px;
     font-family: Garamond, serif;
+
+    text-shadow: 2px 2px 3px #597E52;
 }
 
 button:hover{
@@ -63,9 +66,9 @@ button:hover{
     margin-top: 100px;
 }
 
-.img{
+.img1{
     display: flex;
-    justify-content: center;
+    
 
 }
 

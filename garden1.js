@@ -25,6 +25,6 @@ function display() {
 
 }
 
-
-
-
+function hi() {
+    console.log("NO")
+}
