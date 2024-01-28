@@ -1,5 +1,5 @@
 function home() {
-    window.location = "html_front.html";
+    window.location = "index.html";
 }
 
 function clicked() {

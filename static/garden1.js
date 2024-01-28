@@ -208,7 +208,7 @@ function home() {
     localStorage.setItem("cattail_amount", cattail_counter); 
     localStorage.setItem("packet1", localStorage.getItem("packet1"));
     localStorage.setItem("packet2", localStorage.getItem("packet2"));
-    window.location = "html_front.html"; 
+    window.location = "index.html"; 
 }
 
 function store() {
