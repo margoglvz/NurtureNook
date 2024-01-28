@@ -37,10 +37,14 @@ function purchase(packet) {
             num_coins -= 10; 
             cattail_bought = true; 
             localStorage.setItem("packet2", true);
+
         }
         document.getElementById("coins").textContent = `Coins: ${num_coins}`;  
     } 
     localStorage.setItem("coin_amount", num_coins);
     localStorage.setItem("water_amount", num_lavender);
     localStorage.setItem("waterlily_amount", num_waterlily);
+
+    localStorage.setItem("packet1", localStorage.getItem("packet1"));
+    localStorage.setItem("packet2", localStorage.getItem("packet2"));
 }

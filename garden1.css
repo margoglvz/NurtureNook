@@ -57,10 +57,26 @@ ul {
 }
 #cattail_mini {
   visibility: hidden;
+  max-width: 15%;
 }
 #chamomile_mini {
   visibility: hidden;
+  max-width: 15%;
 }
+
+#cattail_group {
+  visibility: hidden;
+}
+#lavender_group {
+  visibility: visible;
+}
+#chamomile_group {
+  visibility: hidden;
+}
+#waterlily_group {
+  visibility: visible;
+}
+
 #parent {
     position: relative;
   }
@@ -84,6 +100,14 @@ ul {
     width: 30%;
     z-index: 1;
   }
+  #chamomile_seed {
+    position: absolute;
+    top: -25px; 
+    left: 10%; 
+    width: 30%;
+    z-index: 1;
+  }
+  
   #pot_front {
     position: absolute;
     left: 10%; 
