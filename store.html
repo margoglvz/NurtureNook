@@ -13,17 +13,22 @@
         <h1 id="coins">Coins: 0</h1>
     </ul></nav>
 
+    <img id="plank" src="images/plank.png">
+
     <nav id="seeds">
         <img id="chamomile_image" src="images/chamomile_packet.png">
         <img id="cattail_image" src="images/cattail_packet.png">
     </nav>
-    <nav id="labels">
-        <h1>10 coins</h1>
-        <h1>10 coins</h1>
-    </nav>
     <nav id="prices">
-        <h1 onclick="purchase('chamomile')">PURCHASE</h1>
-        <h1 onclick="purchase('cattail')">PURCHASE</h1>
+        <nav id="item1">
+            <h1 id="price1">PRICE: 10 COINS</h1> 
+            <h1 id="buy1" onclick="purchase('chamomile')">PURCHASE</h1>
+        </nav>
+        <nav id="item2">
+            <h1 id="price2">PRICE: 10 COINS</h1> 
+            <h1 id="buy2" onclick="purchase('cattail')">PURCHASE</h1>
+        </nav>
+
     </nav>
 
 </body>
