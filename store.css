@@ -39,6 +39,7 @@ ul {
     justify-content: center;
     background-color: pink; 
     gap: 10%; 
+    border-radius: 25px 25px 0px 0px;
   }
   
   #prices {
@@ -47,17 +48,8 @@ ul {
     justify-content: center;
     background-color: purple; 
     gap: 30%; 
+    border-radius: 0px 0px 25px 25px;
     
-  }
-
-  #price1, #price2 {
-    padding: 10px;
-    background-color: #E1F0DA;
-    border-width: 2px;
-    border-radius: 10px;
-    font-size: 20px;
-    font-family: Garamond, serif;
-    text-shadow: 2px 2px 3px #597E52;
   }
   
 

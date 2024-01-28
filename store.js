@@ -33,4 +33,7 @@ function purchase(packet) {
         }
         document.getElementById("coins").innerHTML = `<h1 id="coins">Coins: ${num_coins}</h1>`; 
     } 
+    localStorage.setItem("coin_amount", num_coins);
+    localStorage.setItem("water_amount", num_lavender);
+    localStorage.setItem("waterlily_amount", num_waterlily);
 }
