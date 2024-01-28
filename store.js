@@ -20,11 +20,15 @@ function purchase(packet) {
         if (packet == 'chamomile') {
             document.getElementById("chamomile_image").style.filter = "brightness(120%)"; 
             setTimeout(reset, 1000); 
+            num_coins -= 10; 
         }
         if (packet == 'cattail') {
             document.getElementById("cattail_image").style.filter = "brightness(120%)"; 
             setTimeout(reset, 1000); 
+            num_coins -= 10; 
         }
+        document.getElementById("coins").innerHTML = `<h1 id="coins">Coins: ${num_coins}</h1>`; 
+        localStorage.setItem("coin_amount", num_coins);
     } 
 }
 
