@@ -2,24 +2,46 @@ let water_counter = 0;
 let waterlily_water_counter = 0;
 let coin_counter = 0;
 
+//Reset code!
 /*
+
 localStorage.setItem("coin_amount", 0);
 localStorage.setItem("water_amount", 0);
 localStorage.setItem("waterlily_amount", 0);
+localStorage.setItem("chamomile_mini", false);
+localStorage.setItem("cattail_mini", false);
+
 */
 
-window.onload = function() {
+function getValues() {
     if (localStorage.getItem("coin_amount") != null) {
         coin_counter = localStorage.getItem("coin_amount"); 
     }
     
     if (localStorage.getItem("water_amount") != null) {
-        water_counter = localStorage.getItem("water_amount") 
+        water_counter = localStorage.getItem("water_amount");
     }
     
     if (localStorage.getItem("waterlily_amount") != null) {
-        waterlily_water_counter = localStorage.getItem("waterlily_amount") 
+        waterlily_water_counter = localStorage.getItem("waterlily_amount"); 
     }
+}
+
+function getPackets() {
+    console.log("love")
+    if (localStorage.getItem("packet1") != null) {
+        document.getElementById("chamomile_mini").style.visibility = "visible"; 
+        console.log("hi")
+    }
+    
+    if (localStorage.getItem("packet2") != null) {
+        document.getElementById("cattail_mini").style.visibility = "visible"; 
+    }
+}
+
+window.onload = function() {
+    getValues(); 
+    getPackets(); 
     displayImage(); 
 }
 
