@@ -31,7 +31,7 @@ function purchase(packet) {
             setTimeout(reset, 200); 
             num_coins -= 10; 
         }
-        document.getElementById("coins").innerHTML = `<h1 id="coins">Coins: ${num_coins}</h1>`; 
+        document.getElementById("coins").textContent = `Coins: ${num_coins}`;  
     } 
     localStorage.setItem("coin_amount", num_coins);
     localStorage.setItem("water_amount", num_lavender);
