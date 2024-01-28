@@ -12,6 +12,15 @@ h1{
     padding-top: 15px;
 }
 
+p{
+    display: flex;
+    font-size: 20px;
+    color: #D4E7C5;
+    justify-content: center;
+    align-items: center;
+    margin-top: -3%;
+}
+
 #parent{
     position: relative;
     }
@@ -22,13 +31,13 @@ h1{
         border-width: 3px;
         border-color: #597E52;
     
-        font-size: 40px;
+        font-size: 30px;
         font-family: Garamond, serif;
     
         box-shadow: 3px 3px 5px #233720;
 
-        top: 200px;
-        left: 800px;
+        top: 230px;
+        left: 860px;
     }
     
     input {
@@ -41,21 +50,29 @@ h1{
         font-family: Garamond, serif;
         margin-left: 30%;
         margin-bottom: 10%;
+        left: 70px;
     }
 
 .picture{
-    width:150px;
+    display: flex;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+
+    border: 1px solid #233720;
+    border-width: 2px;
+    border-color: #233720;
+    border-radius: 4px;
+    padding: 5px;
+    
 }
 
-.business{
-    display: flex;
-    color: white;
-}
+
 
 .loadingtext{
     font-size: 150px;
     font-family: Garamond, serif;
-    color: white;
+    color: #D4E7C5;
 
 }
 
@@ -63,23 +80,9 @@ h1{
     margin-top: 8%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 
     font-size: 30px;
     font-family: Garamond, serif;
 }
-    .picture{
-        width:300px;
-    }
-
-    .business{
-        display: flex;
-        color: white;
-    }
-
-    .loadingtext{
-        font-size: 15px;
-        font-family: Garamond, serif;
-
-    }
 
