@@ -1,6 +1,8 @@
 import requests
 import json
+import os
 
+APIkey = os.getenv("YELP_API_KEY")
 
 
 def getParks_byCity(city):
@@ -10,7 +12,7 @@ def getParks_byCity(city):
     payload = {}
     headers = {
     'accept': 'application/json',
-    'Authorization': 'Bearer xrkJROm1W6EOWNgDrLNNUT9eND0k_ir-Y-WOolxB9Z1hVN_iKGSbCuQt7hlo7idBVkz1OYe2Wg_fxf65shwwSFGkbmW1MPJCnrFXVi2wLAh7pc3H4Cxz1MQCmNS1ZXYx'
+    'Authorization': f'Bearer {APIkey}'
     }
 
     response = requests.request("GET", url, headers=headers, data=payload)
