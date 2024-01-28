@@ -46,17 +46,29 @@ ul {
     align-items: center;
     justify-content: center;
     background-color: purple; 
-    gap: 35%; 
+    gap: 30%; 
     
   }
 
-  #labels {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: green; 
-    gap: 40%; 
-    
+  #price1, #price2 {
+    padding: 10px;
+    background-color: #E1F0DA;
+    border-width: 2px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Garamond, serif;
+    text-shadow: 2px 2px 3px #597E52;
+  }
+  
+
+  #buy1, #buy2 {
+    padding: 10px;
+    background-color: #E1F0DA;
+    border-width: 2px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Garamond, serif;
+    text-shadow: 2px 2px 3px #597E52;
   }
 
   #space {

@@ -2,6 +2,9 @@ let water_counter = 0;
 let waterlily_water_counter = 0;
 let coin_counter = 0;
 
+
+
+
 function water() {
     var lavender = document.getElementById("lavender_seed");
     function change_src(img_path) {
@@ -61,7 +64,7 @@ function home() {
 }
 
 function store() {
-    localStorage.setItem("coin_amount", coin_counter)
+    localStorage.setItem("coin_amount", coin_counter);
     window.location = "store.html"; 
 }
 
