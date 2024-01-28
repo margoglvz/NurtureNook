@@ -19,29 +19,34 @@ function getValues() {
     }
 
     if (localStorage.getItem("chamomile_amount") != null) {
-        waterlily_counter = localStorage.getItem("chamomile_amount"); 
+        chamomile_counter = localStorage.getItem("chamomile_amount"); 
     }
 
     if (localStorage.getItem("cattail_amount") != null) {
-        waterlily_counter = localStorage.getItem("cattail_amount"); 
+        cattail_counter = localStorage.getItem("cattail_amount"); 
     }
 }
 
 function getPackets() {
-    console.log("packet1 is " + localStorage.getItem("packet1"))
-    if (localStorage.getItem("packet1") == "true") {
-        document.getElementById("chamomile_mini").style.visibility = "visible"; 
-    } else {
-        localStorage.setItem("packet1", false); 
-        document.getElementById("chamomile_mini").style.visibility = "hidden"; 
+    if (localStorage.getItem("replaced1") != "true") {
+        console.log("packet1 is " + localStorage.getItem("packet1"))
+        if (localStorage.getItem("packet1") == "true") {
+            document.getElementById("chamomile_mini").style.visibility = "visible"; 
+        } else {
+            localStorage.setItem("packet1", false); 
+            document.getElementById("chamomile_mini").style.visibility = "hidden"; 
+        }
     }
-    console.log("packet2 is " + localStorage.getItem("packet2"))
-    if (localStorage.getItem("packet2") == "true") {
-        document.getElementById("cattail_mini").style.visibility = "visible"; 
-    } else {
-        localStorage.setItem("packet2", false); 
-        document.getElementById("cattail_mini").style.visibility = "hidden"; 
+    if (localStorage.getItem("replaced2") != "true") {
+        console.log("packet2 is " + localStorage.getItem("packet2"))
+        if (localStorage.getItem("packet2") == "true") {
+            document.getElementById("cattail_mini").style.visibility = "visible"; 
+        } else {
+            localStorage.setItem("packet2", false); 
+            document.getElementById("cattail_mini").style.visibility = "hidden"; 
+        }
     }
+
 }
 
 window.onload = function() {
@@ -49,8 +54,14 @@ window.onload = function() {
     localStorage.setItem("coin_amount", 0);
     localStorage.setItem("water_amount", 0);
     localStorage.setItem("waterlily_amount", 0);
+    localStorage.setItem("chamomile_amount", 0);
+    localStorage.setItem("cattail_amount", 0);
     localStorage.setItem("packet1", false);
-    localStorage.setItem("packet2", false);*/
+    localStorage.setItem("packet2", false);
+    localStorage.setItem("replaced1", false);
+    localStorage.setItem("replaced2", false);
+    */
+
     getValues(); 
     getPackets(); 
     displayImage(); 
@@ -107,11 +118,13 @@ function replace1() {
     document.getElementById("lavender_group").style.visibility = "hidden"; 
     document.getElementById("chamomile_group").style.visibility = "visible"; 
     localStorage.setItem("replaced1", true); 
+    document.getElementById("chamomile_mini").style.visibility = "hidden"; 
 }
 function replace2() {
     document.getElementById("waterlily_group").style.visibility = "hidden"; 
     document.getElementById("cattail_group").style.visibility = "visible"; 
     localStorage.setItem("replaced2", true); 
+    document.getElementById("cattail_mini").style.visibility = "hidden"; 
 }
 
 
