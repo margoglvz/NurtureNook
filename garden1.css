@@ -129,6 +129,13 @@ ul {
     width: 30%;
     z-index: 1;
   }
+  #cattail_seed {
+    position: absolute;
+    top: -25px; 
+    left: 50%; 
+    width: 30%;
+    z-index: 1;
+  }
   #water_pot_front {
     position: absolute;
     left: 50%; 
