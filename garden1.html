@@ -12,8 +12,8 @@
         <h1 id="home" onclick="home()">HOME</h1>
         <h1 id="store" onclick="store()">STORE</h1>
         <h1 id="coins">Coins: 0</h1>
-        <img id="chamomile_mini" onclick="replace1()" src="images/temp_packet.webp">
-        <img id="cattail_mini" onclick="replace2()" src="images/temp_packet2.webp">
+        <img id="chamomile_mini" onclick="replace1()" src="images/chamomile_packet.png">
+        <img id="cattail_mini" onclick="replace2()" src="images/cattail_packet.png">
     </ul></nav>
 
 
@@ -21,13 +21,31 @@
         <img id="plank" src="images/plank.png">
         <h1 id="coins"></h1>
         <!-- <img id="pot_front" src="images/pot_front.png" onclick="water()"> -->
-        <img id="pot_back" src="images/pot_back.png" onclick="water()">
-        <img id="lavender_seed" src="images/lavender_1.png" onclick="water()">
-        <img id="pot_front" src="images/pot_front.png" onclick="water()">
+        <nav id="lavender_group">
+            <img id="pot_back" src="images/pot_back.png" onclick="water_lavender()">
+            <img id="lavender_seed" src="images/lavender_1.png" onclick="water_lavender()">
+            <img id="pot_front" src="images/pot_front.png" onclick="water_lavender()">
+        </nav>
         <!-- <img id="water_pot_front" src="images/water_pot_front.png" onclick="water()"> -->
-        <img id="water_pot_back" src="images/water_pot_back.png" onclick="water_waterlily()">
-        <img id="waterlily_seed" src="images/waterlily_1.png" onclick="water_waterlily()">
-        <img id="water_pot_front" src="images/water_pot_front.png" onclick="water_waterlily()">
+        <nav id="waterlily_group">
+            <img id="water_pot_back" src="images/water_pot_back.png" onclick="water_waterlily()">
+            <img id="waterlily_seed" src="images/waterlily_1.png" onclick="water_waterlily()">
+            <img id="water_pot_front" src="images/water_pot_front.png" onclick="water_waterlily()">
+        </nav>
+        
+        <!-- <img id="pot_front" src="images/pot_front.png" onclick="water()"> -->
+        <nav id="chamomile_group">
+            <img id="pot_back" src="images/pot_back.png" onclick="water_chamomile()">
+            <img id="chamomile_seed" src="images/chamomile_1.png" onclick="water_chamomile()">
+            <img id="pot_front" src="images/pot_front.png" onclick="water_chamomile()">
+        </nav>
+        <!-- <img id="pot_front" src="images/pot_front.png" onclick="water()"> -->
+        <nav id="cattail_group">
+            <img id="water_pot_back" src="images/water_pot_back.png" onclick="water_cattail()">
+            <img id="cattail_seed" src="images/cattail_1.png" onclick="water_cattail()">
+            <img id="water_pot_front" src="images/water_pot_front.png" onclick="water_cattail()">
+        </nav>
+        
     </div>
 </body>
 </html>

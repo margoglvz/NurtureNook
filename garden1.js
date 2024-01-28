@@ -1,16 +1,15 @@
 let water_counter = 0;
-let waterlily_water_counter = 0;
+let waterlily_counter = 0;
 let coin_counter = 0;
+let chamomile_counter = 0;
+let cattail_counter = 0; 
 
-//Reset code!
 /*
-
 localStorage.setItem("coin_amount", 0);
 localStorage.setItem("water_amount", 0);
 localStorage.setItem("waterlily_amount", 0);
-localStorage.setItem("chamomile_mini", false);
-localStorage.setItem("cattail_mini", false);
-
+localStorage.setItem("packet1", false);
+localStorage.setItem("packet2", false);
 */
 
 function getValues() {
@@ -23,19 +22,21 @@ function getValues() {
     }
     
     if (localStorage.getItem("waterlily_amount") != null) {
-        waterlily_water_counter = localStorage.getItem("waterlily_amount"); 
+        waterlily_counter = localStorage.getItem("waterlily_amount"); 
     }
 }
 
 function getPackets() {
-    console.log("love")
-    if (localStorage.getItem("packet1") != null) {
+    if (localStorage.getItem("packet1") == true) {
         document.getElementById("chamomile_mini").style.visibility = "visible"; 
-        console.log("hi")
+    } else {
+        localStorage.setItem("packet1", false); 
     }
     
-    if (localStorage.getItem("packet2") != null) {
+    if (localStorage.getItem("packet2") == true) {
         document.getElementById("cattail_mini").style.visibility = "visible"; 
+    } else {
+        localStorage.setItem("packet2", false); 
     }
 }
 
@@ -52,67 +53,109 @@ function displayImage() {
         img_num1 = Math.floor(water_counter/8)+1;
     }
 
-    if (waterlily_water_counter >= 24) {
+    if (waterlily_counter >= 24) {
         img_num2 = 4;
     } else {
-        img_num2 = Math.floor(waterlily_water_counter/8)+1;
+        img_num2 = Math.floor(waterlily_counter/8)+1;
     }
     
+    if (chamomile_counter >= 24) {
+        img_num3 = 4;
+    } else {
+        img_num3 = Math.floor(chamomile_counter/8)+1;
+    }
+
+    if (cattail_counter >= 24) {
+        img_num4 = 4;
+    } else {
+        img_num4 = Math.floor(cattail_counter/8)+1;
+    }
+
     document.getElementById("lavender_seed").src = `images/lavender_${img_num1}.png`;
     document.getElementById("waterlily_seed").src = `images/waterlily_${img_num2}.png`;
+    document.getElementById("chamomile_seed").src = `images/chamomile_${img_num3}.png`;
+    document.getElementById("cattail_seed").src = `images/cattail_${img_num4}.png`;
     document.getElementById("coins").textContent = `Coins: ${coin_counter}`; 
 }
 
-function water() {
-    var lavender = document.getElementById("lavender_seed");
+function replace1() {
+    document.getElementById("lavender_group").style.visibility = "hidden"; 
+    document.getElementById("chamomile_group").style.visibility = "visible"; 
+}
+function replace2() {
+    document.getElementById("waterlily_group").style.visibility = "hidden"; 
+    document.getElementById("cattail_group").style.visibility = "visible"; 
+}
+
+
+function water_lavender() {
     function change_src(img_path) {
-        lavender.src=img_path;
+        document.getElementById("lavender_seed").src=img_path;
     }
     water_counter++; 
+
     if (water_counter > 24) {
         coin_counter++; 
+        document.getElementById("coins").textContent = `Coins: ${coin_counter}`; 
         change_src(`images/lavender_coin.png`)
         setTimeout(change_src, 200, `images/lavender_4.png`);
-    }
-   
-    console.log(water_counter);
-    if (water_counter > 24) {
-        document.getElementById("coins").textContent = `Coins: ${coin_counter}`; 
-    }
-    
-    var img_number = Math.floor(water_counter/8)+1;
-    if (img_number < 5) {
-        if (water_counter % 8 == 0) {
-            console.log(`images/lavender_${img_number}.png`);
-            change_src(`images/lavender_${img_number}.png`);
-        }
+    } else {
+        img_num1 = Math.floor(water_counter/8)+1;
+        change_src(`images/lavender_${img_num1}.png`);
     }
 }
 
-function water_waterlily() {
-    var waterlily = document.getElementById("waterlily_seed");
-    function change_src(img_path) {
-        waterlily.src=img_path;
-    }
 
-    waterlily_water_counter++; 
-    if (waterlily_water_counter > 24) {
+function water_waterlily() {
+    function change_src(img_path) {
+        document.getElementById("waterlily_seed").src=img_path;
+    }
+    waterlily_counter++; 
+
+    if (waterlily_counter > 24) {
         coin_counter++; 
+        document.getElementById("coins").textContent = `Coins: ${coin_counter}`; 
         change_src(`images/waterlily_coin.png`)
         setTimeout(change_src, 200, `images/waterlily_4.png`);
+    } else {
+        img_num2 = Math.floor(waterlily_counter/8)+1;
+        change_src(`images/waterlily_${img_num2}.png`);
     }
-   
-    console.log(waterlily_water_counter);
-    if (waterlily_water_counter > 24) {
+}
+
+
+function water_chamomile() {
+    function change_src(img_path) {
+        document.getElementById("chamomile_seed").src=img_path;
+    }
+    chamomile_counter++; 
+
+    if (chamomile_counter > 24) {
+        coin_counter++; 
         document.getElementById("coins").textContent = `Coins: ${coin_counter}`; 
+        change_src(`images/chamomile_coin.png`)
+        setTimeout(change_src, 200, `images/chamomile_4.png`);
+    } else {
+        img_num3 = Math.floor(chamomile_counter/8)+1;
+        change_src(`images/chamomile_${img_num3}.png`);
     }
-    
-    var img_number = Math.floor(waterlily_water_counter/8)+1;
-    if (img_number < 5) {
-        if (waterlily_water_counter % 8 == 0) {
-            console.log(`images/waterlily_${img_number}.png`);
-            change_src(`images/waterlily_${img_number}.png`);
-        }
+}
+
+
+function water_cattail() {
+    function change_src(img_path) {
+        document.getElementById("cattail_seed").src=img_path;
+    }
+    cattail_counter++; 
+
+    if (cattail_counter > 24) {
+        coin_counter++; 
+        document.getElementById("coins").textContent = `Coins: ${coin_counter}`; 
+        change_src(`images/cattail_coin.png`)
+        setTimeout(change_src, 200, `images/cattail_4.png`);
+    } else {
+        img_num3 = Math.floor(cattail_counter/8)+1;
+        change_src(`images/cattail_${img_num3}.png`);
     }
 }
 
@@ -120,14 +163,18 @@ function water_waterlily() {
 function home() {
     localStorage.setItem("coin_amount", coin_counter);
     localStorage.setItem("water_amount", water_counter);
-    localStorage.setItem("waterlily_amount", waterlily_water_counter);
+    localStorage.setItem("waterlily_amount", waterlily_counter);
+    localStorage.setItem("packet1", localStorage.getItem("packet1"));
+    localStorage.setItem("packet2", localStorage.getItem("packet2"));
     window.location = "html_front.html"; 
 }
 
 function store() {
     localStorage.setItem("coin_amount", coin_counter);
     localStorage.setItem("water_amount", water_counter);
-    localStorage.setItem("waterlily_amount", waterlily_water_counter);
+    localStorage.setItem("waterlily_amount", waterlily_counter);
+    localStorage.setItem("packet1", localStorage.getItem("packet1"));
+    localStorage.setItem("packet2", localStorage.getItem("packet2"));
     window.location = "store.html"; 
 }
 
