@@ -8,7 +8,6 @@ localStorage.setItem("water_amount", 0);
 localStorage.setItem("waterlily_amount", 0);
 */
 
-
 window.onload = function() {
     if (localStorage.getItem("coin_amount") != null) {
         coin_counter = localStorage.getItem("coin_amount"); 
@@ -25,8 +24,18 @@ window.onload = function() {
 }
 
 function displayImage() {
-    img_num1 = Math.floor(water_counter/8)+1;
-    img_num2 = Math.floor(waterlily_water_counter/8)+1;
+    if (water_counter >= 24) {
+        img_num1 = 4; 
+    } else {
+        img_num1 = Math.floor(water_counter/8)+1;
+    }
+
+    if (waterlily_water_counter >= 24) {
+        img_num2 = 4;
+    } else {
+        img_num2 = Math.floor(waterlily_water_counter/8)+1;
+    }
+    
     document.getElementById("lavender_seed").src = `images/lavender_${img_num1}.png`;
     document.getElementById("waterlily_seed").src = `images/waterlily_${img_num2}.png`;
     document.getElementById("coins").textContent = `Coins: ${coin_counter}`; 
@@ -87,6 +96,9 @@ function water_waterlily() {
 
 
 function home() {
+    localStorage.setItem("coin_amount", coin_counter);
+    localStorage.setItem("water_amount", water_counter);
+    localStorage.setItem("waterlily_amount", waterlily_water_counter);
     window.location = "html_front.html"; 
 }
 
