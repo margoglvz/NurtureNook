@@ -12,7 +12,7 @@ def getParks_byCity(city):
     payload = {}
     headers = {
     'accept': 'application/json',
-    'Authorization': f'Bearer {APIkey}'
+    'Authorization': f'Bearer {YELP_API_KEY}'
     }
 
     response = requests.request("GET", url, headers=headers, data=payload)
