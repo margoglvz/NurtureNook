@@ -7,8 +7,6 @@ def getParks_byCity(city):
     print(city)
     url = f"https://api.yelp.com/v3/businesses/search?sort_by=best_match&limit=20&location={city}&term=gardens near me"
 
-    #querystring = {"location": city}
-
     payload = {}
     headers = {
     'accept': 'application/json',
