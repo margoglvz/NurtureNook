@@ -8,7 +8,7 @@ function clicked() {
 
     document.getElementById('results').className += " loadingtext"
 
-    fetch('http://127.0.0.1:5000/' + userInput)
+    fetch('/' + userInput)
         .then(res => res.json())
         .then(response => {
             console.log(response);
