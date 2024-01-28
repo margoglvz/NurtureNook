@@ -1,7 +1,8 @@
 import requests
+import json
 
-def getParks_byCity(term: str):
-    url = f"https://api.yelp.com/v3/businesses/search?sort_by=best_match&limit=20&location={term}&term=gardens near me"
+def getParks_byCity(city):
+    url = f"https://api.yelp.com/v3/businesses/search?sort_by=best_match&limit=20&location={city}&term=gardens near me"
 
     payload = {}
     headers = {
@@ -13,12 +14,12 @@ def getParks_byCity(term: str):
     print(response)
     return response.json()
 
-try:
-    city = input()
-except TypeError as e:
-    print("Please enter a city!")
+# try:
+#     city = input()
+# except TypeError as e:
+#     print("Please enter a city!")
 
 try:
-    print(getParks_byCity(city))
+    print(getParks_byCity(city="irvine"))
 except:
     print("Sorry! Cannot find information for this city")
