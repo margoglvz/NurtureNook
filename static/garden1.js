@@ -50,6 +50,7 @@ function getPackets() {
 }
 
 window.onload = function() {
+    console.log(water_counter); 
     /*
     localStorage.setItem("coin_amount", 0);
     localStorage.setItem("water_amount", 0);
