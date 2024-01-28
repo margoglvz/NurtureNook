@@ -55,7 +55,12 @@ ul {
   font-family: Garamond, serif;
   text-shadow: 2px 2px 3px #597E52;
 }
-
+#cattail_mini {
+  visibility: hidden;
+}
+#chamomile_mini {
+  visibility: hidden;
+}
 #parent {
     position: relative;
   }
