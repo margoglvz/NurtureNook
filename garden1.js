@@ -50,7 +50,7 @@ function water() {
     if (water_counter > 24) {
         coin_counter++; 
         change_src(`images/lavender_coin.png`)
-        setTimeout(change_src, 2000, `images/lavender_4.png`);
+        setTimeout(change_src, 200, `images/lavender_4.png`);
     }
    
     console.log(water_counter);
@@ -77,7 +77,7 @@ function water_waterlily() {
     if (waterlily_water_counter > 24) {
         coin_counter++; 
         change_src(`images/waterlily_coin.png`)
-        setTimeout(change_src, 2000, `images/waterlily_4.png`);
+        setTimeout(change_src, 200, `images/waterlily_4.png`);
     }
    
     console.log(waterlily_water_counter);
