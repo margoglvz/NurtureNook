@@ -50,6 +50,7 @@ function getPackets() {
 }
 
 window.onload = function() {
+    console.log(water_counter); 
     /*
     localStorage.setItem("coin_amount", 0);
     localStorage.setItem("water_amount", 0);
@@ -61,7 +62,6 @@ window.onload = function() {
     localStorage.setItem("replaced1", false);
     localStorage.setItem("replaced2", false);
     */
-
     getValues(); 
     getPackets(); 
     displayImage(); 
@@ -72,24 +72,28 @@ function displayImage() {
         img_num1 = 4; 
     } else {
         img_num1 = Math.floor(water_counter/8)+1;
+        console.log(img_num1); 
     }
 
     if (waterlily_counter >= 24) {
         img_num2 = 4;
     } else {
         img_num2 = Math.floor(waterlily_counter/8)+1;
+        console.log(img_num2); 
     }
     
     if (chamomile_counter >= 24) {
         img_num3 = 4;
     } else {
         img_num3 = Math.floor(chamomile_counter/8)+1;
+        console.log(img_num3); 
     }
 
     if (cattail_counter >= 24) {
         img_num4 = 4;
     } else {
         img_num4 = Math.floor(cattail_counter/8)+1;
+        console.log(img_num4); 
     }
 
     document.getElementById("lavender_seed").src = `images/lavender_${img_num1}.png`;
@@ -208,7 +212,7 @@ function home() {
     localStorage.setItem("cattail_amount", cattail_counter); 
     localStorage.setItem("packet1", localStorage.getItem("packet1"));
     localStorage.setItem("packet2", localStorage.getItem("packet2"));
-    window.location = "html_front.html"; 
+    window.location = "index.html"; 
 }
 
 function store() {
