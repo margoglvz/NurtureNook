@@ -1,6 +1,8 @@
 function clicked() {
     let userInput = document.getElementById('user').value;
-    document.getElementById('results').innerHTML = "Gardens near " + userInput + "..."
+    document.getElementById('results').innerHTML = "Gardens near " + userInput + "..." + "<br><br>"
+
+    document.getElementById('results').className += " loadingtext"
 
     fetch('http://127.0.0.1:5000/' + userInput)
         .then(res => res.json())
@@ -9,7 +11,10 @@ function clicked() {
             for (let i = 0; i < response.businesses.length; i++) {
                 document.getElementById(
                     'results'
-                ).innerHTML += `${response.businesses[i].name} class="business"`;
+                ).innerHTML += response.businesses[i].name;
+                document.getElementById(
+                    'results'
+                ).className += " business"
                 document.getElementById(
                     'results'
                 ).innerHTML += `<img src="${response.businesses[i].image_url}" class="picture"/> <br>`;

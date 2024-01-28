@@ -12,28 +12,36 @@ h1{
     padding-top: 15px;
 }
 
-button{
-    display: flex;
-    background-color: #E1F0DA;
+#parent{
+    position: relative;
+    }
+    button {
+        position: absolute;
+        background-color: #E1F0DA;
+    
+        border-width: 3px;
+        border-color: #597E52;
+    
+        font-size: 40px;
+        font-family: Garamond, serif;
+    
+        box-shadow: 3px 3px 5px #233720;
 
-    border-width: 3px;
-    border-color: #597E52;
-
-    font-size: 40px;
-    font-family: Garamond, serif;
-
-    box-shadow: 3px 3px 5px #233720;
-}
-
-input {
-    display: flex;
-    width: 20vw;
-    height: 4vh;
-    border-radius: 10px;
-    font-size: 20px; 
-
-    margin-left: 40%;
-}
+        top: 200px;
+        left: 800px;
+    }
+    
+    input {
+        position: absolute;
+        width: 20vw;
+        height: 4vh;
+        border-width: 3px;
+        border-color: #0f2d0a;
+        font-size: 30px; 
+        font-family: Garamond, serif;
+        margin-left: 30%;
+        margin-bottom: 10%;
+    }
 
 .picture{
     width:150px;
@@ -41,6 +49,37 @@ input {
 
 .business{
     display: flex;
+    color: white;
+}
+
+.loadingtext{
+    font-size: 150px;
+    font-family: Garamond, serif;
+    color: white;
 
 }
+
+#results{
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: 30px;
+    font-family: Garamond, serif;
+}
+    .picture{
+        width:300px;
+    }
+
+    .business{
+        display: flex;
+        color: white;
+    }
+
+    .loadingtext{
+        font-size: 15px;
+        font-family: Garamond, serif;
+
+    }
 
