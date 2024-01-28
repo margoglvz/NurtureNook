@@ -1,17 +1,22 @@
 import requests
 import json
 
+
+
 def getParks_byCity(city):
+    print(city)
     url = f"https://api.yelp.com/v3/businesses/search?sort_by=best_match&limit=20&location={city}&term=gardens near me"
+
+    #querystring = {"location": city}
 
     payload = {}
     headers = {
     'accept': 'application/json',
-    'Authorization': 'Bearer 1muoimTp10TZ2yTNQlKmMmhWcf77PDxciOm1K3KkbCpjlP1otTxuYIhh2D7FIGYFnFP4ScYRcO9BwvKg1kbY7DfGR5Wi4-_7t8h2YJ1CrCP5IK6MNmL-5y5m1mS1ZXYx'
+    'Authorization': 'Bearer xrkJROm1W6EOWNgDrLNNUT9eND0k_ir-Y-WOolxB9Z1hVN_iKGSbCuQt7hlo7idBVkz1OYe2Wg_fxf65shwwSFGkbmW1MPJCnrFXVi2wLAh7pc3H4Cxz1MQCmNS1ZXYx'
     }
 
     response = requests.request("GET", url, headers=headers, data=payload)
-    print(response)
+    
     return response.json()
 
 # try:
@@ -20,6 +25,6 @@ def getParks_byCity(city):
 #     print("Please enter a city!")
 
 try:
-    print(getParks_byCity(city="irvine"))
+    print(getParks_byCity(city))
 except:
     print("Sorry! Cannot find information for this city")

@@ -4,5 +4,43 @@ html{
 
 h1{
     display: flex;
+    font-size: 80px;
+    color: #D4E7C5;
+    text-shadow: 2px 2px 4px #101b0e;
     justify-content: center;
+    align-items: center;
+    padding-top: 15px;
 }
+
+button{
+    display: flex;
+    background-color: #E1F0DA;
+
+    border-width: 3px;
+    border-color: #597E52;
+
+    font-size: 40px;
+    font-family: Garamond, serif;
+
+    box-shadow: 3px 3px 5px #233720;
+}
+
+input {
+    display: flex;
+    width: 20vw;
+    height: 4vh;
+    border-radius: 10px;
+    font-size: 20px; 
+
+    margin-left: 40%;
+}
+
+.picture{
+    width:150px;
+}
+
+.business{
+    display: flex;
+
+}
+
