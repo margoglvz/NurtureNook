@@ -4,13 +4,6 @@ let coin_counter = 0;
 let chamomile_counter = 0;
 let cattail_counter = 0; 
 
-/*
-localStorage.setItem("coin_amount", 0);
-localStorage.setItem("water_amount", 0);
-localStorage.setItem("waterlily_amount", 0);
-localStorage.setItem("packet1", false);
-localStorage.setItem("packet2", false);
-*/
 
 function getValues() {
     if (localStorage.getItem("coin_amount") != null) {
@@ -24,23 +17,40 @@ function getValues() {
     if (localStorage.getItem("waterlily_amount") != null) {
         waterlily_counter = localStorage.getItem("waterlily_amount"); 
     }
+
+    if (localStorage.getItem("chamomile_amount") != null) {
+        waterlily_counter = localStorage.getItem("chamomile_amount"); 
+    }
+
+    if (localStorage.getItem("cattail_amount") != null) {
+        waterlily_counter = localStorage.getItem("cattail_amount"); 
+    }
 }
 
 function getPackets() {
-    if (localStorage.getItem("packet1") == true) {
+    console.log("packet1 is " + localStorage.getItem("packet1"))
+    if (localStorage.getItem("packet1") == "true") {
         document.getElementById("chamomile_mini").style.visibility = "visible"; 
     } else {
         localStorage.setItem("packet1", false); 
+        document.getElementById("chamomile_mini").style.visibility = "hidden"; 
     }
-    
-    if (localStorage.getItem("packet2") == true) {
+    console.log("packet2 is " + localStorage.getItem("packet2"))
+    if (localStorage.getItem("packet2") == "true") {
         document.getElementById("cattail_mini").style.visibility = "visible"; 
     } else {
         localStorage.setItem("packet2", false); 
+        document.getElementById("cattail_mini").style.visibility = "hidden"; 
     }
 }
 
 window.onload = function() {
+    /*
+    localStorage.setItem("coin_amount", 0);
+    localStorage.setItem("water_amount", 0);
+    localStorage.setItem("waterlily_amount", 0);
+    localStorage.setItem("packet1", false);
+    localStorage.setItem("packet2", false);*/
     getValues(); 
     getPackets(); 
     displayImage(); 
@@ -76,15 +86,32 @@ function displayImage() {
     document.getElementById("chamomile_seed").src = `images/chamomile_${img_num3}.png`;
     document.getElementById("cattail_seed").src = `images/cattail_${img_num4}.png`;
     document.getElementById("coins").textContent = `Coins: ${coin_counter}`; 
+
+    if (localStorage.getItem("replaced1") == "true") {
+        document.getElementById("lavender_group").style.visibility = "hidden"; 
+        document.getElementById("chamomile_group").style.visibility = "visible"; 
+    } else {
+        document.getElementById("lavender_group").style.visibility = "visible"; 
+        document.getElementById("chamomile_group").style.visibility = "hidden"; 
+    }
+    if (localStorage.getItem("replaced2") == "true") {
+        document.getElementById("waterlily_group").style.visibility = "hidden"; 
+        document.getElementById("cattail_group").style.visibility = "visible"; 
+    } else {
+        document.getElementById("waterlily_group").style.visibility = "visible"; 
+        document.getElementById("cattail_group").style.visibility = "hidden"; 
+    }
 }
 
 function replace1() {
     document.getElementById("lavender_group").style.visibility = "hidden"; 
     document.getElementById("chamomile_group").style.visibility = "visible"; 
+    localStorage.setItem("replaced1", true); 
 }
 function replace2() {
     document.getElementById("waterlily_group").style.visibility = "hidden"; 
     document.getElementById("cattail_group").style.visibility = "visible"; 
+    localStorage.setItem("replaced2", true); 
 }
 
 
@@ -164,6 +191,8 @@ function home() {
     localStorage.setItem("coin_amount", coin_counter);
     localStorage.setItem("water_amount", water_counter);
     localStorage.setItem("waterlily_amount", waterlily_counter);
+    localStorage.setItem("chamomile_amount", chamomile_counter);
+    localStorage.setItem("cattail_amount", cattail_counter); 
     localStorage.setItem("packet1", localStorage.getItem("packet1"));
     localStorage.setItem("packet2", localStorage.getItem("packet2"));
     window.location = "html_front.html"; 
@@ -173,6 +202,8 @@ function store() {
     localStorage.setItem("coin_amount", coin_counter);
     localStorage.setItem("water_amount", water_counter);
     localStorage.setItem("waterlily_amount", waterlily_counter);
+    localStorage.setItem("chamomile_amount", chamomile_counter);
+    localStorage.setItem("cattail_amount", cattail_counter); 
     localStorage.setItem("packet1", localStorage.getItem("packet1"));
     localStorage.setItem("packet2", localStorage.getItem("packet2"));
     window.location = "store.html"; 
