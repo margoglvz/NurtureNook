@@ -8,11 +8,21 @@
     <link rel="stylesheet" href="gardens_nearme.css"></link>
 </head>
 <body>
+    <!--
+    <nav id="nav_bar"><ul>
+        <h1 id="back" onclick="home()">BACK</h1>
+    </ul></nav>*/
+    -->
+    <h1 id="back" onclick="home()">BACK</h1>
+
     <h1>Gardens Near You!</h1>
     <p>Type in a city to find gardens and nature-centered places near you!</p>
     <br>
-    <input type="text" id="user"/>
-    <button onclick="clicked()">Submit</button>
+    <nav id="parent">
+        <input type="text" id="user"/>
+        <button onclick="clicked()">Submit</button>
+    </nav>
+
     <div id="results"></div>
     
 </body>
