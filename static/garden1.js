@@ -51,7 +51,7 @@ function getPackets() {
 
 window.onload = function() {
     console.log(water_counter); 
-    /*
+
     localStorage.setItem("coin_amount", 0);
     localStorage.setItem("water_amount", 0);
     localStorage.setItem("waterlily_amount", 0);
@@ -61,7 +61,6 @@ window.onload = function() {
     localStorage.setItem("packet2", false);
     localStorage.setItem("replaced1", false);
     localStorage.setItem("replaced2", false);
-    */
 
     getValues(); 
     getPackets(); 
