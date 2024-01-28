@@ -1,0 +1,13 @@
+#physical {
+    padding: 10px;
+    position: absolute;
+    background-color: #E1F0DA;
+    border-width: 2px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Garamond, serif;
+    text-shadow: 2px 2px 3px #597E52;
+    width: 200px;
+    top: 75%;
+    left: 43%;
+  }
