@@ -1,5 +1,6 @@
 html{
     background-color: #597E52;
+    background-image: url("images/kasjdflskdalj.png");
 }
 
 h1{
@@ -59,11 +60,9 @@ p{
     height: 300px;
     justify-content: center;
 
-    border: 1px solid #233720;
-    border-width: 2px;
+    border: 5px solid #597E52;
     border-color: #233720;
     border-radius: 4px;
-    padding: 5px;
     
 }
 
@@ -73,6 +72,7 @@ p{
     font-size: 150px;
     font-family: Garamond, serif;
     color: #D4E7C5;
+    text-shadow: 2px 2px 2px #101b0e;
 
 }
 
