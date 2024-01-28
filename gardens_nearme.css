@@ -23,36 +23,34 @@ p{
 }
 
 #parent{
-    position: relative;
-    }
-    button {
-        position: absolute;
-        background-color: #E1F0DA;
-    
-        border-width: 3px;
-        border-color: #597E52;
-    
-        font-size: 30px;
-        font-family: Garamond, serif;
-    
-        box-shadow: 3px 3px 5px #233720;
+    display: inline-block; 
+}
+button {
+    position: absolute;
+    background-color: #E1F0DA;
 
-        top: 230px;
-        left: 860px;
-    }
-    
-    input {
-        position: absolute;
-        width: 20vw;
-        height: 4vh;
-        border-width: 3px;
-        border-color: #0f2d0a;
-        font-size: 30px; 
-        font-family: Garamond, serif;
-        margin-left: 30%;
-        margin-bottom: 10%;
-        left: 70px;
-    }
+    border-width: 3px;
+    border-color: #597E52;
+
+    font-size: 30px;
+    font-family: Garamond, serif;
+
+    box-shadow: 3px 3px 5px #233720;
+    margin-left: 60%;
+}
+
+input {
+    position: absolute;
+    width: 20vw;
+    height: 4vh;
+    border-width: 3px;
+    border-color: #0f2d0a;
+    font-size: 30px; 
+    font-family: Garamond, serif;
+    margin-left: 30%;
+    margin-bottom: 10%;
+    left: 70px;
+}
 
 .picture{
     display: flex;
@@ -75,6 +73,29 @@ p{
     text-shadow: 2px 2px 2px #101b0e;
 
 }
+#nav_bar {
+    border-radius: 25px; 
+    background-color: #799959; 
+    padding: 0.2%; 
+  }
+
+#back {
+    color: black; 
+    padding: 10px;
+    background-color: #E1F0DA;
+    border-width: 2px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Garamond, serif;
+    text-shadow: 2px 2px 3px #597E52;
+    max-width: 5%; 
+  }
+  #back:hover {
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+  }
 
 #results{
     margin-top: 8%;

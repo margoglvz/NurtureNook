@@ -1,3 +1,7 @@
+function home() {
+    window.location = "html_front.html";
+}
+
 function clicked() {
     let userInput = document.getElementById('user').value;
     document.getElementById('results').innerHTML = "Gardens near " + userInput + "..." + "<br><br>"
