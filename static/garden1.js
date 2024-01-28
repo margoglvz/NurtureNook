@@ -73,24 +73,28 @@ function displayImage() {
         img_num1 = 4; 
     } else {
         img_num1 = Math.floor(water_counter/8)+1;
+        console.log(img_num1); 
     }
 
     if (waterlily_counter >= 24) {
         img_num2 = 4;
     } else {
         img_num2 = Math.floor(waterlily_counter/8)+1;
+        console.log(img_num2); 
     }
     
     if (chamomile_counter >= 24) {
         img_num3 = 4;
     } else {
         img_num3 = Math.floor(chamomile_counter/8)+1;
+        console.log(img_num3); 
     }
 
     if (cattail_counter >= 24) {
         img_num4 = 4;
     } else {
         img_num4 = Math.floor(cattail_counter/8)+1;
+        console.log(img_num4); 
     }
 
     document.getElementById("lavender_seed").src = `images/lavender_${img_num1}.png`;
